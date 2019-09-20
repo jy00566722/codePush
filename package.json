@@ -1,0 +1,27 @@
+{
+  "name": "codepush",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jy00566722/codePush.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jy00566722/codePush/issues"
+  },
+  "homepage": "https://github.com/jy00566722/codePush#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.0.0-alpha.7"
+  }
+}
