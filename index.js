@@ -8,11 +8,11 @@ app.use(express.json())
 
 app.get('/codePush',async (req,res)=>{
     console.log(1)
-})
+}) 
 
 app.post('/codePush',async (req,res)=>{
     console.log(req.body)
-    exec('dir',(err,stdout,stderr)=>{
+    exec('cd /home/www/pdd && ls',(err,stdout,stderr)=>{
         if(err){
             console.log(err)
             return
