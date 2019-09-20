@@ -11,14 +11,20 @@ app.get('/codePush',async (req,res)=>{
 }) 
 
 app.post('/codePush',async (req,res)=>{
-    console.log(req.body)
-    exec('cd /home/www/pdd && ls',(err,stdout,stderr)=>{
+    console.log('收到PDD项目git codePush消息')
+    console.log(req.body.before)
+    exec('cd /home/www/pdd && git pull',(err,stdout,stderr)=>{
         if(err){
             console.log(err)
             return
+        }else{
+            exec('pm2 restart 5',(err,stdout,stderr)=>{
+                if(err){
+                    console.log(err)
+                }
+            })
         }
-        console.log(stdout)
-        console.log(stderr)
+       
     })
 
 
