@@ -18,7 +18,7 @@ app.post('/codePush',async (req,res)=>{
             console.log(err)
             return
         }else{
-            exec('pm2 restart 5',(err,stdout,stderr)=>{
+            exec('pm2 restart 4',(err,stdout,stderr)=>{
                 if(err){
                     console.log(err)
                 }
